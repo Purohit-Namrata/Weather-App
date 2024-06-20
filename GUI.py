@@ -15,7 +15,6 @@ def show_weather():
     else:
         weather_text = f"City: {city}\n"
         weather_text += f"Temperature: {weather_data['main']['temp']}°F\n"
-        weather_text += f"Pressure: {weather_data['main']['pressure']} hPa\n"
         weather_text += f"Humidity: {weather_data['main']['humidity']}%\n"
         weather_text += f"Description: {weather_data['weather'][0]['description']}\n"
         weather_label.config(text=weather_text)
