@@ -20,7 +20,6 @@ def show_weather():
         weather_label.config(text=weather_text)
 
 root=Tk()
-
 root.title("Weather App")
 root.geometry("400x400")
 
