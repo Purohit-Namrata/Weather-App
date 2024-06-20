@@ -7,12 +7,8 @@ def show_weather():
     api_key = "3ed3dc53bb5965300bffdf6739831403" 
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
-    # Show loading state
-    weather_label.config(text="Loading...")
-    
     response = requests.get(url)
     weather_data = response.json()
-
 
     if "message" in weather_data:
         messagebox.showerror("Error", weather_data["message"])
@@ -23,7 +19,6 @@ def show_weather():
         weather_text += f"Humidity: {weather_data['main']['humidity']}%\n"
         weather_text += f"Description: {weather_data['weather'][0]['description']}\n"
         weather_label.config(text=weather_text)
-
 
 root=Tk()
 
